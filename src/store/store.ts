@@ -8,16 +8,7 @@ import storage from 'redux-persist/lib/storage' // defaults to localStorage for 
 const persistConfig = {
     key: 'root',
     storage,
-    // transforms: [
-    //   encryptTransform({
-    //     secretKey: localStorage.getItem("login-token") || "recru@123",
-    //     onError: function (error) {
-    //       // Handle the error.
-    //       console.log(error)
-    //     },
-    //   }),
-    // ],
-  }
+}
 
 const rootReducer = combineReducers({auth:AuthReducer});
 const persistedReducer = persistReducer(persistConfig, rootReducer);
